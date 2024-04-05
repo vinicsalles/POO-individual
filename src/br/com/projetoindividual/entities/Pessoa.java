@@ -1,19 +1,21 @@
 package br.com.projetoindividual.entities;
 
-public class pessoa {
+public class Pessoa {
 	private String nome;
 	private int cpf;
 	private double nascimento;
-
-	public pessoa() {
+	private int fkEnd;
+	
+	public Pessoa() {
 		super();
 	}
 
-	public pessoa(String nome, int cpf, double nascimento) {
+	public Pessoa(String nome, int cpf, double nascimento, int fkEnd) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.nascimento = nascimento;
+		this.fkEnd = fkEnd;
 	}
 
 	public String getNome() {
@@ -39,5 +41,14 @@ public class pessoa {
 	public void setNascimento(double nascimento) {
 		this.nascimento = nascimento;
 	}
+
+	public int getFkEnd() {
+		return fkEnd;
+	}
+
+	public void setFkEnd(int fkEnd) {
+		this.fkEnd = fkEnd;
+	}
+	
 }
 

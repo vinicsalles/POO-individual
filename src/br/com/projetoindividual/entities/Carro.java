@@ -1,25 +1,36 @@
 package br.com.projetoindividual.entities;
 
-public class carro {
+public class Carro {
+	private int id;
 	private String nome;
 	private String modelo;
 	private String marca;
 	private String placa;
 	private int anoFabricacao;
-	private float valor;
-
-	public carro() {
+	private double valor;
+	
+	public Carro() {
 		super();
+		
 	}
-
-	public carro(String nome, String modelo, String marca, String placa, int anoFabricacao, float valor) {
+	
+	public Carro(int id, String nome, String modelo, String marca, String placa, int anoFabricacao, double valor) {
 		super();
+		this.id = id;
 		this.nome = nome;
 		this.modelo = modelo;
 		this.marca = marca;
 		this.placa = placa;
 		this.anoFabricacao = anoFabricacao;
 		this.valor = valor;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -62,12 +73,15 @@ public class carro {
 		this.anoFabricacao = anoFabricacao;
 	}
 
-	public float getValor() {
+	public double getValor() {
 		return valor;
 	}
 
-	public void setValor(float valor) {
+	public void setValor(double valor) {
 		this.valor = valor;
 	}
-
+	
+	
+	
+	
 }
