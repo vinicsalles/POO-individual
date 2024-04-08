@@ -1,10 +1,10 @@
-package br.com.projetoindividual.entities;
+package br.com.poo.projetoindividual.entities;
 
 public class Pessoa {
 	private String nome;
-	private int cpf;
-	private double nascimento;
-	private int fkEnd;
+	private Integer cpf;
+	private Double nascimento;
+	private Integer fkEnd;
 	
 	public Pessoa() {
 		super();

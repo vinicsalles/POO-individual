@@ -1,6 +1,6 @@
-package br.com.projetoindividual;
+package br.com.poo.projetoindividual;
 
-import br.com.projetoindividual.controllers.CarroController;
+import br.com.poo.projetoindividual.controllers.CarroController;
 
 public class projetoindividualApplication {
 

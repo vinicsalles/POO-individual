@@ -1,10 +1,10 @@
-package br.com.projetoindividual.entities;
+package br.com.poo.projetoindividual.entities;
 
 public class Endereco {
-	private int id;
+	private Integer id;
 	private String rua;
-	private double cep;
-	private int numero;
+	private Double cep;
+	private Integer numero;
 	private String complemento;
 	private String bairro;
 	private String cidade;

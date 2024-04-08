@@ -1,13 +1,13 @@
-package br.com.projetoindividual.entities;
+package br.com.poo.projetoindividual.entities;
 
 public class Carro {
-	private int id;
+	private Integer id;
 	private String nome;
 	private String modelo;
 	private String marca;
 	private String placa;
-	private int anoFabricacao;
-	private double valor;
+	private Integer anoFabricacao;
+	private Double valor;
 	
 	public Carro() {
 		super();

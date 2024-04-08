@@ -1,6 +1,6 @@
-package br.com.projetoindividual.services;
+package br.com.poo.projetoindividual.services;
 
-import br.com.projetoindividual.entities.Carro;
+import br.com.poo.projetoindividual.entities.Carro;
 
 public class CarroService {
 	Carro carro = new Carro();

@@ -1,4 +1,4 @@
-package br.com.projetoindividual.util;
+package br.com.poo.projetoindividual.util;
 
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Formatter;
