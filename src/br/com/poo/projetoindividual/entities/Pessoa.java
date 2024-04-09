@@ -1,6 +1,7 @@
 package br.com.poo.projetoindividual.entities;
 
 public class Pessoa {
+	private Integer id;
 	private String nome;
 	private Integer cpf;
 	private Double nascimento;

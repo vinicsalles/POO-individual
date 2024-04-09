@@ -7,14 +7,14 @@ public class Carro {
 	private String marca;
 	private String placa;
 	private Integer anoFabricacao;
-	private Double valor;
+	private Float valor;
 	
 	public Carro() {
 		super();
 		
 	}
 	
-	public Carro(int id, String nome, String modelo, String marca, String placa, int anoFabricacao, double valor) {
+	public Carro(int id, String nome, String modelo, String marca, String placa, int anoFabricacao, float valor) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -77,7 +77,7 @@ public class Carro {
 		return valor;
 	}
 
-	public void setValor(double valor) {
+	public void setValor(float valor) {
 		this.valor = valor;
 	}
 	
