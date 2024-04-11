@@ -12,7 +12,7 @@ public class CarroService {
 		carro.setModelo("Sedã");
 		carro.setPlaca("KTR8732");
 		carro.setAnoFabricacao(2020);
-		carro.setValor(100.000);
+		carro.setValor(10.0000);
 		
 		System.out.println(
 				carro.getNome()+ "\n"+
