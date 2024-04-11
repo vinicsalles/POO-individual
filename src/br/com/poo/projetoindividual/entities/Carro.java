@@ -1,5 +1,8 @@
 package br.com.poo.projetoindividual.entities;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Carro {
 	private Integer id;
 	private String nome;
@@ -7,14 +10,16 @@ public class Carro {
 	private String marca;
 	private String placa;
 	private Integer anoFabricacao;
-	private Float valor;
+	private Double valor;
+	
+	static Map<Integer, Carro> mapaCarros = new HashMap<>();
 	
 	public Carro() {
 		super();
 		
 	}
 	
-	public Carro(int id, String nome, String modelo, String marca, String placa, int anoFabricacao, float valor) {
+	public Carro(int id, String nome, String modelo, String marca, String placa, int anoFabricacao, Double valor) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -73,12 +78,27 @@ public class Carro {
 		this.anoFabricacao = anoFabricacao;
 	}
 
-	public double getValor() {
+	public Double getValor() {
 		return valor;
 	}
 
-	public void setValor(float valor) {
-		this.valor = valor;
+	public void setValor(Double d) {
+		this.valor = d;
+	}
+	
+	
+	public static Map<Integer, Carro> getMapaCarros() {
+		return mapaCarros;
+	}
+
+	public static void setMapaCarros(Map<Integer, Carro> mapaCarros) {
+		Carro.mapaCarros = mapaCarros;
+	}
+
+	@Override
+	public String toString() {
+		return "Carro [id=" + id + ", nome=" + nome + ", modelo=" + modelo + ", marca=" + marca + ", placa=" + placa
+				+ ", anoFabricacao=" + anoFabricacao + ", valor=" + valor + "]";
 	}
 	
 	
