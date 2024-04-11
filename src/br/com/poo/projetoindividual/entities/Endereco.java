@@ -1,5 +1,8 @@
 package br.com.poo.projetoindividual.entities;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Endereco {
 	private Integer id;
 	private String rua;
@@ -10,6 +13,8 @@ public class Endereco {
 	private String cidade;
 	private String estado;
 	
+	static Map<Integer, Endereco> mapaEnderecos = new HashMap<>();
+
 	
 	public Endereco() {
 		super();
@@ -107,6 +112,21 @@ public class Endereco {
 
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+	
+	
+	public static Map<Integer, Endereco> getMapaEnderecos() {
+		return mapaEnderecos;
+	}
+
+	public static void setMapaEnderecos(Map<Integer, Endereco> mapaEnderecos) {
+		Endereco.mapaEnderecos = mapaEnderecos;
+	}
+
+	@Override
+	public String toString() {
+		return "Endereco [id=" + id + ", rua=" + rua + ", cep=" + cep + ", numero=" + numero + ", complemento="
+				+ complemento + ", bairro=" + bairro + ", cidade=" + cidade + ", estado=" + estado + "]";
 	}
 	
 	
