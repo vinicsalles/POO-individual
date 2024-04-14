@@ -1,11 +1,21 @@
 package br.com.poo.projetoindividual.controllers;
 
-import br.com.poo.projetoindividual.services.CarroService;
+import java.io.IOException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class CarroController {
+import br.com.poo.projetoindividual.entities.Carro;
+import br.com.poo.projetoindividual.services.CarroService;
+import br.com.poo.projetoindividual.util.Util;
+
+public class CarroController {	
 	CarroService carroService = new CarroService();
-	
-	public void listarCarro() {
-		carroService.listarCarro();
+	static Logger logger = Util.setupLogger();
+
+	public void listarCarros() throws IOException {
+		List<Carro> carros = carroService.listarCarros();
+		Util.customizer();
+		logger.log(Level.INFO, carros + "\n\nListar gerada com Sucesso!!");
 	}
 }
