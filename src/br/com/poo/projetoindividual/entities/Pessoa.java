@@ -78,9 +78,10 @@ public class Pessoa {
 
 	@Override
 	public String toString() {
-		return "Pessoa [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", nascimento=" + nascimento + ", fkEnd="
-				+ fkEnd + "]";
+		return "Nome: " + nome + "\t CPF: " + cpf + "\t Nascimento: " + nascimento + "\n";
 	}
+	
+	
 	
 }
 
