@@ -98,7 +98,7 @@ public class SubMenuService {
 		case 2:
 			Util.customizer();
 			logger.log(Level.INFO, () -> "Lista os Carros:\n ");
-			carroController.listarCarros();
+			carroController.listarCarrosTXT();
 			logger.log(Level.INFO, () -> "\n\n");
 			submenuTXT();
 
@@ -108,7 +108,7 @@ public class SubMenuService {
 
 			Util.customizer();
 			logger.log(Level.INFO, () -> "Lista de Endereços:\n ");
-			enderecoController.listarEnderecos();
+			enderecoController.listarEnderecosTXT();
 			logger.log(Level.INFO, () -> "\n\n");
 			submenuTXT();
 			break;
