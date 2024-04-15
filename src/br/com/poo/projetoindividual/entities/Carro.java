@@ -97,7 +97,7 @@ public class Carro {
 
 	@Override
 	public String toString() {
-		return "Carro: Nome:  " + nome + ", Placa: " + placa + ", Ano: " + anoFabricacao + ", Preço: " + valor + "]";
+		return "Carro: Nome:  " + nome + ", Placa: " + placa + ", Ano: " + anoFabricacao + ", Preço: " + valor + "\n";
 	}
 	
 	
