@@ -18,4 +18,8 @@ public class CarroController {
 		Util.customizer();
 		logger.log(Level.INFO, carros + "\n\nListar gerada com Sucesso!!");
 	}
+	
+	public void listarCarrosTXT() throws IOException{
+		carroService.listarCarrosTXT();
+	}
 }
