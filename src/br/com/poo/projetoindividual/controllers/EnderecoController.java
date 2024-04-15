@@ -17,4 +17,8 @@ public class EnderecoController {
 		Util.customizer();
 		logger.log(Level.INFO, end + "\n\nLista gerada com Sucesso!!");
 	}
+	
+	public void listarEnderecosTXT() throws IOException {
+		enderecoService.listarEndTXT();
+	}
 }
