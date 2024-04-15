@@ -26,11 +26,7 @@ public class PessoaController {
 	}
 	
 	public void listarNomesPessoasTXT() throws IOException {
-		List<Pessoa> pessoasTXT = pessoaService.listaNomesPessoasTXT();
-		logger.log(Level.INFO, pessoasTXT + "");
-
-		
-
+		pessoaService.listaNomesPessoasTXT();
 	}
 	
 	public void listarPessoEnd() throws IOException{
