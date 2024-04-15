@@ -14,6 +14,14 @@ public class CarroService {
 		for(Carro carro : Carro.getMapaCarros().values()) {
 			listaCarros.add(carro);
 		}
+		return listaCarros;
+	}
+	
+	public List<Carro> listarCarrosTXT() throws IOException {
+		List<Carro> listaCarros = new ArrayList<>();
+		for(Carro carro : Carro.getMapaCarros().values()) {
+			listaCarros.add(carro);
+		}
 		RelatorioIO.listarNomesCarros(listaCarros);
 		return listaCarros;
 	}
