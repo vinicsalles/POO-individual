@@ -22,15 +22,15 @@ public class PessoaService {
 	
 	public List<Pessoa> listaNomesPessoasTXT() throws IOException{
 		List<Pessoa> listaNomesPessoas = new ArrayList<>();
+		for(Pessoa pessoa : Pessoa.getMapaPessoas().values()) {
+			listaNomesPessoas.add(pessoa);
+		}
 		RelatorioIO.listarNomesPessoas(listaNomesPessoas);
 		return listaNomesPessoas;
-		
 	}
 	
 	public void listarPessoaEnd() throws IOException {
 		EnderecoService  enderecoService = new EnderecoService();
 		RelatorioIO.listarPessoaEnd(listaNomesPessoas(), enderecoService.listarEnd());
 	}
-	
-	
 }
