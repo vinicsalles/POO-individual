@@ -105,7 +105,7 @@ public class RelatorioIO {
 			for (Pessoa pessoa : pessoas) {
 				for(Endereco endereco : enderecos) {
 					if(pessoa.getFkEnd() == endereco.getId()) {
-						buffWrite.append("\n\nNome Pessoa: " + pessoa.getNome() + "\tNome da rua em que mora: " + endereco.getRua()+ "\n\n");
+						buffWrite.append("\n\nNome Pessoa: " + pessoa.getNome() + "\tRua: " + endereco.getRua()+ "\n\n");
 					}
 				}
 			}
