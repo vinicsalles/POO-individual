@@ -37,4 +37,8 @@ public class PessoaController {
 		logger.log(Level.INFO, pessoas + "\t");;
 		logger.log(Level.INFO, enderecos  +"\n\nListar gerada com Sucesso!!");;
 	}
+	
+	public void listarPessoEndTXT() throws IOException{
+		pessoaService.listarPessoaEndTXT();
+	}
 }
