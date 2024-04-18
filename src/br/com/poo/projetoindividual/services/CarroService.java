@@ -8,23 +8,22 @@ import br.com.poo.projetoindividual.entities.Carro;
 import br.com.poo.projetoindividual.io.RelatorioIO;
 
 public class CarroService {
-	
+
 	public List<Carro> listarCarros() throws IOException {
 		List<Carro> listaCarros = new ArrayList<>();
-		for(Carro carro : Carro.getMapaCarros().values()) {
+		for (Carro carro : Carro.getMapaCarros().values()) {
 			listaCarros.add(carro);
 		}
 		return listaCarros;
 	}
-	
+
 	public List<Carro> listarCarrosTXT() throws IOException {
 		List<Carro> listaCarros = new ArrayList<>();
-		for(Carro carro : Carro.getMapaCarros().values()) {
+		for (Carro carro : Carro.getMapaCarros().values()) {
 			listaCarros.add(carro);
 		}
 		RelatorioIO.listarNomesCarros(listaCarros);
 		return listaCarros;
 	}
 
-	
 }

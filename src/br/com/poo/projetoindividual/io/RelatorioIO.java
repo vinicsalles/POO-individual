@@ -58,7 +58,7 @@ public class RelatorioIO {
 		buffWrite.append("\n\n--------------RELATÓRIO : LISTA NOMES PESSOAS---------------");
 		if (!nomesPessoas.isEmpty()) {
 			for (Pessoa nomePessoa : nomesPessoas) {
-				buffWrite.append("\n"+ nomePessoa + "\n");
+				buffWrite.append("\n" + nomePessoa + "\n");
 			}
 		}
 		LocalDateTime ldt = LocalDateTime.now();
@@ -66,14 +66,15 @@ public class RelatorioIO {
 		buffWrite.append("\n\n--------------FIM DA LISTA DE NOMES PESSOAS--------------- \n\n");
 		buffWrite.close();
 	}
-	
+
 	public static void listarNomesCarros(List<Carro> nomesCarros) throws IOException {
 		String nome = "lista-Carros";
 		BufferedWriter buffWrite = new BufferedWriter(new FileWriter(PATH_BASICO + nome + EXTENSAO, true));
 		buffWrite.append("\n--------------RELATÓRIO : LISTA CARROS---------------");
 		if (!nomesCarros.isEmpty()) {
-			for	(Carro carro : nomesCarros) {
-				buffWrite.append("\n\nNome: " + carro.getNome() + "\tPlaca: " + carro.getPlaca() + "\tAno: " + carro.getAnoFabricacao() + "\tValor: " + carro.getValor() + "\n\n");
+			for (Carro carro : nomesCarros) {
+				buffWrite.append("\n\nNome: " + carro.getNome() + "\tPlaca: " + carro.getPlaca() + "\tAno: "
+						+ carro.getAnoFabricacao() + "\tValor: " + carro.getValor() + "\n\n");
 			}
 		}
 		LocalDateTime ldt = LocalDateTime.now();
@@ -81,14 +82,15 @@ public class RelatorioIO {
 		buffWrite.append("\n\n--------------FIM DA LISTA DE CARROS--------------- ");
 		buffWrite.close();
 	}
-	
+
 	public static void listarEnderecos(List<Endereco> nomesEnderecos) throws IOException {
 		String nome = "lista-Enderecos";
 		BufferedWriter buffWrite = new BufferedWriter(new FileWriter(PATH_BASICO + nome + EXTENSAO, true));
 		buffWrite.append("\n--------------RELATÓRIO : LISTA ENDEREÇOS---------------");
 		if (!nomesEnderecos.isEmpty()) {
 			for (Endereco endereco : nomesEnderecos) {
-				buffWrite.append("\n\nRua: " + endereco.getRua() + "Bairro: " + endereco.getBairro()+ "Cidade: " + endereco.getCidade()+ "Estado: " + endereco.getEstado()+"\n");
+				buffWrite.append("\n\nRua: " + endereco.getRua() + "Bairro: " + endereco.getBairro() + "Cidade: "
+						+ endereco.getCidade() + "Estado: " + endereco.getEstado() + "\n");
 			}
 		}
 		LocalDateTime ldt = LocalDateTime.now();
@@ -96,16 +98,17 @@ public class RelatorioIO {
 		buffWrite.append("\n\n--------------FIM DA LISTA DE ENDEREÇOS--------------- ");
 		buffWrite.close();
 	}
-	
+
 	public static void listarPessoaEnd(List<Pessoa> pessoas, List<Endereco> enderecos) throws IOException {
-	String nome = "lista-PessoaEnd";
+		String nome = "lista-PessoaEnd";
 		BufferedWriter buffWrite = new BufferedWriter(new FileWriter(PATH_BASICO + nome + EXTENSAO, true));
 		buffWrite.append("\n--------------RELATÓRIO : LISTAR PESSOAS E ENDEREÇOS---------------");
 		if (!pessoas.isEmpty() && !enderecos.isEmpty()) {
 			for (Pessoa pessoa : pessoas) {
-				for(Endereco endereco : enderecos) {
-					if(pessoa.getFkEnd() == endereco.getId()) {
-						buffWrite.append("\n\nNome Pessoa: " + pessoa.getNome() + "\tRua: " + endereco.getRua()+ "\n\n");
+				for (Endereco endereco : enderecos) {
+					if (pessoa.getFkEnd() == endereco.getId()) {
+						buffWrite.append(
+								"\n\nNome Pessoa: " + pessoa.getNome() + "\tRua: " + endereco.getRua() + "\n\n");
 					}
 				}
 			}

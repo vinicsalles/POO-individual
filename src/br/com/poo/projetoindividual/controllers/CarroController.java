@@ -9,7 +9,7 @@ import br.com.poo.projetoindividual.entities.Carro;
 import br.com.poo.projetoindividual.services.CarroService;
 import br.com.poo.projetoindividual.util.Util;
 
-public class CarroController {	
+public class CarroController {
 	CarroService carroService = new CarroService();
 	static Logger logger = Util.setupLogger();
 
@@ -18,8 +18,9 @@ public class CarroController {
 		Util.customizer();
 		logger.log(Level.INFO, carros + "\n\nListar gerada com Sucesso!!");
 	}
-	
-	public void listarCarrosTXT() throws IOException{
+
+	public void listarCarrosTXT() throws IOException {
 		carroService.listarCarrosTXT();
 	}
+
 }

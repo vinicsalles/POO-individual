@@ -11,14 +11,14 @@ public class Carro {
 	private String placa;
 	private Integer anoFabricacao;
 	private Double valor;
-	
+
 	static Map<Integer, Carro> mapaCarros = new HashMap<>();
-	
+
 	public Carro() {
 		super();
-		
+
 	}
-	
+
 	public Carro(int id, String nome, String modelo, String marca, String placa, int anoFabricacao, Double valor) {
 		super();
 		this.id = id;
@@ -85,8 +85,7 @@ public class Carro {
 	public void setValor(Double d) {
 		this.valor = d;
 	}
-	
-	
+
 	public static Map<Integer, Carro> getMapaCarros() {
 		return mapaCarros;
 	}
@@ -99,8 +98,5 @@ public class Carro {
 	public String toString() {
 		return "Carro: Nome:  " + nome + ", Placa: " + placa + ", Ano: " + anoFabricacao + ", Preço: " + valor + "\n";
 	}
-	
-	
-	
-	
+
 }

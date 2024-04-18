@@ -10,10 +10,9 @@ public class Pessoa {
 	private Integer cpf;
 	private LocalDate nascimento;
 	private Integer fkEnd;
-	
+
 	static Map<Integer, Pessoa> mapaPessoas = new HashMap<>();
 
-	
 	public Pessoa() {
 		super();
 	}
@@ -66,7 +65,6 @@ public class Pessoa {
 	public void setFkEnd(Integer fkEnd) {
 		this.fkEnd = fkEnd;
 	}
-	
 
 	public static Map<Integer, Pessoa> getMapaPessoas() {
 		return mapaPessoas;
@@ -80,8 +78,5 @@ public class Pessoa {
 	public String toString() {
 		return "Nome: " + nome + "\t CPF: " + cpf + "\t Nascimento: " + nascimento + "\n";
 	}
-	
-	
-	
-}
 
+}

@@ -5,6 +5,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import br.com.poo.projetoindividual.util.Util;
 
 public class MenuService {
@@ -13,13 +14,13 @@ public class MenuService {
 
 	public static void menu() throws IOException, InterruptedException {
 		Util.customizer();
-		logger.log(Level.INFO, "\n\n ------------------Gerador de Relatórios:------------------\n\n" + "\t\t[1] Relatórios Impressos: \n" + "\t\t[2] Relatórios Console\n"
-				+ "\t\t[0] Sair\n" + "\n\n----------------------------------------------------------- " + "\n\n\t\tDigite uma opção:");
+		logger.log(Level.INFO, "\n\n ------------------Gerador de Relatórios:------------------\n\n"
+				+ "\t\t[1] Relatórios Impressos: \n" + "\t\t[2] Relatórios Console\n" + "\t\t[0] Sair\n"
+				+ "\n\n----------------------------------------------------------- " + "\n\n\t\tDigite uma opção:");
 		try {
 			int opcao = sc.nextInt();
 
 			switch (opcao) {
-			
 
 			case 1:
 				Thread.sleep(1000);
@@ -36,21 +37,21 @@ public class MenuService {
 				Util.customizer();
 				logger.log(Level.INFO, () -> "Obrigado Volte Sempre");
 				break;
-		
+
 			default:
 				Util.customizer();
 				logger.log(Level.INFO, () -> "Opção Inválida");
 				MenuService.menu();
 				break;
 			}
-		}catch(InputMismatchException e) {
+		} catch (InputMismatchException e) {
 			Util.customizer();
 			logger.log(Level.INFO, () -> "Opção Inválida");
 			sc.nextLine();
 			Thread.sleep(1000);
 			MenuService.menu();
 		}
-			
-		}
-	
+
+	}
+
 }

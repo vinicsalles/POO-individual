@@ -12,12 +12,13 @@ import br.com.poo.projetoindividual.util.Util;
 public class EnderecoController {
 	EnderecoService enderecoService = new EnderecoService();
 	static Logger logger = Util.setupLogger();
+
 	public void listarEnderecos() throws IOException {
 		List<Endereco> end = enderecoService.listarEnd();
 		Util.customizer();
 		logger.log(Level.INFO, end + "\n\nLista gerada com Sucesso!!");
 	}
-	
+
 	public void listarEnderecosTXT() throws IOException {
 		enderecoService.listarEndTXT();
 	}
